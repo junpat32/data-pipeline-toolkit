@@ -1,0 +1,6 @@
+InvoiceNo,StockCode,Description,Quantity,InvoiceDate,UnitPrice,CustomerID,Country
+000101,0010,Ceramic mug,3,2025-01-03T09:00:00,10.00,00042,United Kingdom
+000101,0020,Tea tin,2,2025-01-03T09:00:00,8.00,00042,United Kingdom
+c000102,0010,Ceramic mug,-1,2025-01-04T13:00:00,10.00,,United Kingdom
+000103,0030,Sample spoon,1,2025-01-05T12:00:00,0.00,00051,France
+000104,0020,Tea tin,1,2025-01-05T12:20:00,-4.00,00051,France

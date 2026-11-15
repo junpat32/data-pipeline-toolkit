@@ -1,0 +1,14 @@
+{
+  "dataset": "inventory",
+  "version": 1,
+  "csv": {"encoding": "utf-8-sig", "delimiter": ","},
+  "columns": [
+    {"source": "warehouse", "target": "warehouse", "type": "text", "required": true},
+    {"source": "sku", "target": "sku", "type": "text", "required": true},
+    {"source": "quantity_on_hand", "target": "quantity_on_hand", "type": "integer", "required": true},
+    {"source": "as_of_date", "target": "as_of_date", "type": "date", "format": "%Y-%m-%d", "required": true}
+  ],
+  "rules": [
+    {"code": "NEGATIVE_STOCK", "type": "numeric_bounds", "field": "quantity_on_hand", "min": 0}
+  ]
+}

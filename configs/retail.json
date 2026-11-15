@@ -1,0 +1,20 @@
+{
+  "dataset": "retail",
+  "version": 1,
+  "csv": {"encoding": "utf-8-sig", "delimiter": ","},
+  "columns": [
+    {"source": "InvoiceNo", "target": "invoice_no", "type": "text", "required": true},
+    {"source": "StockCode", "target": "stock_code", "type": "text", "required": true},
+    {"source": "Description", "target": "description", "type": "text"},
+    {"source": "Quantity", "target": "quantity", "type": "integer", "required": true},
+    {"source": "InvoiceDate", "target": "invoice_date", "type": "timestamp", "format": "%Y-%m-%dT%H:%M:%S", "required": true},
+    {"source": "UnitPrice", "target": "unit_price", "type": "decimal", "precision": 18, "scale": 4, "required": true},
+    {"source": "CustomerID", "target": "customer_id", "type": "text"},
+    {"source": "Country", "target": "country", "type": "text", "required": true},
+    {"source": "SourceWorkbookRow", "target": "source_workbook_row", "type": "integer", "optional_source": true}
+  ],
+  "rules": [
+    {"code": "NEGATIVE_UNIT_PRICE", "type": "numeric_bounds", "field": "unit_price", "min": "0"},
+    {"code": "UK_CUSTOMER_ID_MISSING", "type": "warn_if_missing", "field": "customer_id", "when": {"field": "country", "equals": "United Kingdom"}}
+  ]
+}

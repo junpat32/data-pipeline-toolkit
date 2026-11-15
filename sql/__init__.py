@@ -1,0 +1,1 @@
+"""Packaged DuckDB reporting queries."""

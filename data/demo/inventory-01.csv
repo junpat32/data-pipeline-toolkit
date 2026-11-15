@@ -1,0 +1,4 @@
+warehouse,sku,quantity_on_hand,as_of_date
+North,0010,18,2025-01-31
+North,0020,0,2025-01-31
+South,0030,-3,2025-01-31
